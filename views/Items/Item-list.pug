@@ -1,0 +1,27 @@
+extends ../layout 
+
+block content 
+    .row 
+        .col-sm-8
+             h1 list of items
+        .col-sm-4
+                a(href="/itemsRoutes/add", class="btn btn-primary float-right") Add New Items
+    table.table
+        thead
+            tr
+                th Car Name
+                th Car Color
+                th Car Model
+                th Actions
+            
+        tbody
+            each item in items 
+                tr
+                    td=item.Name
+                    td=item.Color
+                    td=item.Model
+                    td 
+                        a(href="/itemsRoutes/delete/"+item._id, class="btn btn-info btn-sm") Delete
+                        a(href="/itemsRoutes/edit/"+item._id, class="btn btn-success btn-sm") Edit
+                   
+                

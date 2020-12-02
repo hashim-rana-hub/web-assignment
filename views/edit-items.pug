@@ -1,0 +1,17 @@
+extends layout
+
+block content 
+    h1 Edit Items
+    form(action="/itemsRoutes/update/"+item._id, method="post") 
+        .form-group 
+            label(for="name") Car Name
+            input(type="text", class="form-control", name="Name", value=item.Name) 
+        .form-group 
+            label(for="shape") Car Color
+            input(type="text", class="form-control", name="Shape", value=item.Shape) 
+        .form-group 
+            label(for="rout") Car Model
+            input(type="text", class="form-control", name="Rout", value=item.Rout) 
+    
+        
+        input(type="submit", class="btn btn-success"  ) 
